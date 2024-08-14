@@ -104,4 +104,19 @@ return {
       }
     end,
   },
+  {
+    "benfowler/telescope-luasnip.nvim",
+    module = "telescope._extensions.luasnip", -- if you wish to lazy-load
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      local conf = require "nvchad.configs.telescope"
+      conf.extensions_list = {
+        "luasnip",
+      }
+
+      return conf
+    end,
+  },
 }
