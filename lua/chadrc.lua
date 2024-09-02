@@ -18,8 +18,8 @@ M.term = {
   float = {
     relative = "editor",
     border = "single",
-    row = 0.1,
-    col = 0.1,
+    row = 0.15,
+    col = 0.09,
     width = 0.8,
     height = 0.7,
   },
