@@ -109,11 +109,21 @@ return {
     module = "telescope._extensions.luasnip", -- if you wish to lazy-load
   },
   {
+    "AckslD/nvim-neoclip.lua",
+    dependencies = {
+      { "nvim-telescope/telescope.nvim" },
+    },
+    config = function()
+      require("neoclip").setup()
+    end,
+  },
+  {
     "nvim-telescope/telescope.nvim",
     opts = function()
       local conf = require "nvchad.configs.telescope"
       conf.extensions_list = {
         "luasnip",
+        "neoclip",
       }
 
       return conf
